@@ -10,5 +10,5 @@ Create a simple self-checkout system prompt for the prices and quantities of thr
 * Be sure you explicitly convert input to numerical data before doing any calculations.
 
 #### Challenges:
-* Revise the program to ensure to prices and quantities are enter as numeric values. Don’t allow the user to proceed if the value entered is not numeric.
-* After the program so that an indeterminate number of items can bantered. The tax and total are computed when there are no more items to be entered.
+* Revise the program to ensure the prices and quantities are entered as numeric values. Don’t allow the user to proceed if the value entered is not numeric.
+* Alter the program so that an indeterminate number of items can bantered. The tax and total are computed when there are no more items to be entered.

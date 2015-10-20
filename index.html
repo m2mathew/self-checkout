@@ -3,11 +3,36 @@
 <head>
 	<title>Self Checkout</title>
 
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="./styles/main.sass.css">
 </head>
 <body>
+	<header>
+		<div>
+			<h1>Check Yourself</h1>
+		</div>
+		<div>
+			<p>Buy something nice for yourself. You deserve it.</p>
+		</div>
+	</header>
 
+	<main>
+		<h2>Enter Your Item</h2>
+		<form>
+			<label for="item">Item to Purchase</label>
+			<input id="item" type="text" placeholder="What do you want to purchase?">
+			<labelfor="price">Item Cost</label>
+			<input id="price" type="text" placeholder="How much does it cost?">
+			<button>Add Item</button>
 
+			<div id="total-button-box"></div>
+		</form>
+
+	</main>
+
+	<footer class="footer">
+        <p>A creation by <a href="http://www.drumsensei.com">Mike Mathew</a> for <a href="http://www.theironyard.com"> The Iron Yard</a></p>
+    </footer>
 
 <script type="text/javascript" src="./scripts/bundle.js"></script>
 </body>
