@@ -19,16 +19,33 @@
 	<main>
 		<h2>Enter Your Item</h2>
 		<form>
-			<label for="item">Item to Purchase</label>
-			<input id="item" type="text" placeholder="What do you want to purchase?">
-			<labelfor="price">Item Cost</label>
-			<input id="price" type="text" placeholder="How much does it cost?">
-			<button>Add Item</button>
-
-			<div id="total-button-box"></div>
+			<div class="label-box">
+				<label for="item">Item to Purchase</label>
+			</div>
+			<div class="input-box">
+				<input id="item" type="text" placeholder="What do you want to purchase?">
+			</div>
+			<div class="label-box">
+				<label for="price">Item Cost</label>
+			</div>
+			<div class="input-box">
+				<input id="price" type="text" placeholder="How much does it cost?">
+			</div>
+			<div>
+				<button>Add Item</button>
+			</div>
+			<div id="total-button-box">
+				<button>Complete Checkout</button>
+			</div>
 		</form>
-
 	</main>
+
+	<section>
+		<h3>Your cart</h3>
+		<div id="item-list"></div>
+
+
+	</section>
 
 	<footer class="footer">
         <p>A creation by <a href="http://www.drumsensei.com">Mike Mathew</a> for <a href="http://www.theironyard.com"> The Iron Yard</a></p>

@@ -7,21 +7,24 @@
  */
 
 'use strict';
-
 var $ = require('jquery');
 
+var $item = $('#item');
+var $price = $('#price');
+var $buttonBox = $('#total-button-box');
+
 $(document).ready(function() {
+	var Tax = 5.5;
+	var subtotal, total = 0;
 
 
 
+	$('form').on('submit', function(e) {
+		e.preventDefault();
 
+		var price = parseFloat($price.val());
 
-
-
-
-
-
-
+	})
 
 
 
