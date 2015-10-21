@@ -33,15 +33,28 @@
 			</div>
 			<div>
 				<button>Add Item</button>
+				<p id="error"></p>
 			</div>
 		</form>
-		<div id="total-button-box">
-			<button id="total-button">Complete Checkout</button>
+		<div id="total-box">
+			<div>
+				<p>
+					<span class="update-labels">Subtotal</span>
+					<span id="subtotal-update"></span>
+				</p>
+
+				<p><small>Tax Rate - 5.5 %</small></p>
+
+				<p>
+					<span class="update-labels">Total</span>
+					<span id="total-update"></span>
+				</p>
+			</div>
 		</div>
 	</main>
 
 	<section>
-		<h3>Your cart</h3>
+		<h3 class="shopping-cart"></h3>
 		<div>
 			<table class="cart">
 				<thead id="item-headers">
@@ -50,9 +63,7 @@
 				</tbody>
 			</table>
 		</div>
-
-
-
+		<button id="reset-button">Reset Cart</button>
 	</section>
 
 	<footer class="footer">

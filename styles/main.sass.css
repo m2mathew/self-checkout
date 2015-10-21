@@ -7,16 +7,19 @@ body {
 
 main {
   flex: 1;
-  margin: 1em 2em 0 2em;
+  margin: 0 2em;
   line-height: 1.6em; }
 
 header {
   margin: 0;
-  padding: 1em 2em 0 2em;
+  padding: 0 2em;
   border-top: 16px solid #7E78C5;
-  border-bottom: 2px solid #3F18A8; }
+  border-bottom: 4px solid #3F18A8; }
+  header h1 {
+    float: left; }
   header p {
-    float: right; }
+    float: right;
+    padding-top: 2em; }
 
 form label {
   font-weight: bold;
@@ -36,30 +39,27 @@ form #item {
   margin-bottom: 1.5em; }
 
 form button {
+  color: #ddd;
   margin-left: 2em;
-  background-color: #7E78C5;
-  border: 1px solid #3F18A8;
+  background-color: #523F79;
+  border: 2px solid #3F18A8;
   padding: 0.6em 2em;
   font-size: 1em;
   font-weight: bold;
-  text-shadow: 1px 1px 2px #ccc;
   margin-top: 2em;
   letter-spacing: 0.25em; }
   form button:hover {
     background-color: #9186CD; }
 
-#total-button-box #total-button {
-  margin-left: 2em;
-  padding: 0.6em 2.5em;
-  font-size: 1em;
-  background-color: #7E78C5;
-  border: 1px solid #3F18A8;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px #ccc;
-  margin-top: 2em;
-  letter-spacing: 0.25em; }
-  #total-button-box #total-button:hover {
-    background-color: #9186CD; }
+form #error {
+  color: red; }
+
+#total-box .update-labels {
+  padding-left: 2em;
+  font-weight: bold; }
+
+#total-box small {
+  padding-left: 2.4em; }
 
 section {
   flex: 1;
@@ -68,27 +68,40 @@ section {
   line-height: 1.6em; }
   section .cart {
     table-layout: fixed;
-    width: 75%;
+    width: 40%;
     white-space: nowrap; }
     section .cart th {
-      border-bottom: 1px solid #3F18A8;
-      background-color: #9186CD; }
+      border-bottom: 1px solid #73CFF0;
+      background-color: #73CFF0; }
     section .cart .row-item {
-      width: 75%; }
+      width: 60%; }
     section .cart .row-price {
-      width: 25%; }
+      width: 40%; }
   section .cart td {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center; }
+  section #reset-button {
+    color: #ddd;
+    margin-left: 2em;
+    padding: 0.6em 2.5em;
+    font-size: 1em;
+    background-color: #523F79;
+    border: 2px solid #3F18A8;
+    font-weight: bold;
+    margin-top: 2em;
+    letter-spacing: 0.25em;
+    float: right; }
+    section #reset-button:hover {
+      background-color: #9186CD; }
 
 footer {
   background-color: #D5E5F2;
   margin: 0; }
   footer p {
     padding-left: 2em;
-    font-size: 1.25em;
+    font-size: 1em;
     line-height: 1.6em;
     color: #555; }
     footer p a {

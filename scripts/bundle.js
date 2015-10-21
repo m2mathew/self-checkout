@@ -9224,26 +9224,62 @@ var $ = require('jquery');
 
 var $item = $('#item');
 var $price = $('#price');
-var $totalButton = $('#total-button');
+var $resetButton = $('#reset-button');
 var $itemList = $('#item-list');
+var $subtotal = $('#subtotal-update');
+var $total = $('#total-update');
+var subtotal = 0;
+var total = 0;
+var tax = 0;
+var taxRate = 5.5;
 
 $(document).ready(function () {
-	var Tax = 5.5;
-	var subtotal,
-	    total = 0;
 
 	$('form').on('submit', function (e) {
 		e.preventDefault();
+		tax = 0;
+		$('#error').empty();
 
-		var price = parseFloat($price.val()).toFixed(2);
+		// covert price to a number and then only have two decimal places
+		var price = parseFloat($price.val()) * 100;
+		price = Math.trunc(price) / 100;
+
+		if (price < 0 || isNaN(price) === true) {
+			$('#error').text('Please enter a valid price.');
+			return;
+		}
+
 		var item = $item.val();
 
-		$('#item-headers').append('<tr><th class="row-item">Item</th><th class="row-price">Price</th></tr>');
+		// print a running list of what is being purchased
+		$('.shopping-cart').html('Your cart');
+		$('#item-headers').html('<tr><th class="row-item">Item</th><th class="row-price">Price</th></tr>');
+		$itemList.append('<tr><td class="row">' + item + '</td><td>' + price.toFixed(2) + '</td></tr>');
 
-		$itemList.append('<tr><td class="row">' + item + '</td><td>' + price + '</td></tr>');
+		// clear input values after form submitted
+		$item.val('');
+		$price.val('');
+
+		// keeping track of running totals
+		subtotal = subtotal + price;
+		$subtotal.text(' - ' + subtotal.toFixed(2));
+		tax = subtotal * taxRate / 100;
+		total = subtotal + tax;
+		$total.text(' - ' + total.toFixed(2));
+		$item.focus();
 	});
 
-	$totalButton.on('click', function () {});
+	$resetButton.on('click', function () {
+		// reset values and empty the html elements
+		total = 0;
+		subtotal = 0;
+		$('.shopping-cart').empty();
+		$('#item-headers').empty();
+		$itemList.empty();
+		$subtotal.empty();
+		$total.empty();
+		$('#error').empty();
+	});
 });
 
 },{"jquery":1}]},{},[2])
