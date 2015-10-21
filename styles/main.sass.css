@@ -68,7 +68,7 @@ section {
   line-height: 1.6em; }
   section .cart {
     table-layout: fixed;
-    width: 40%;
+    width: 50%;
     white-space: nowrap; }
     section .cart th {
       border-bottom: 1px solid #73CFF0;
@@ -76,7 +76,9 @@ section {
     section .cart .row-item {
       width: 60%; }
     section .cart .row-price {
-      width: 40%; }
+      width: 30%; }
+    section .cart .row-quantity {
+      width: 10%; }
   section .cart td {
     white-space: nowrap;
     overflow: hidden;

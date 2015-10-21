@@ -96,7 +96,7 @@ section {
 
 	.cart {
 		table-layout: fixed;
-		width: 40%;
+		width: 50%;
 		white-space: nowrap;
 
 		th {
@@ -109,7 +109,11 @@ section {
 		}
 
 		.row-price {
-			width: 40%;
+			width: 30%;
+		}
+
+		.row-quantity {
+			width: 10%;
 		}
 	}
 

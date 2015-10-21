@@ -14,6 +14,7 @@ var $price = $('#price');
 var $resetButton = $('#reset-button');
 var $itemList = $('#item-list');
 var $subtotal = $('#subtotal-update');
+var $quantity = $('#quantity');
 var $total = $('#total-update');
 var subtotal = 0;
 var total = 0;
@@ -38,18 +39,20 @@ $(document).ready(function() {
 		}
 
 		var item = $item.val();
+		var quantity = parseInt($quantity.val());
 
 		// print a running list of what is being purchased
 		$('.shopping-cart').html('Your cart');
-		$('#item-headers').html('<tr><th class="row-item">Item</th><th class="row-price">Price</th></tr>');
-		$itemList.append('<tr><td class="row">'+ item +'</td><td>'+ price.toFixed(2) +'</td></tr>');
+		$('#item-headers').html('<tr><th class="row-item">Item</th><th class="row-price">Price</th><th class="row-quantity">Quantity</th></tr>');
+		$itemList.append('<tr><td class="row">'+ item +'</td><td>'+ price.toFixed(2) +'</td><td>'+ quantity +'</td></tr>');
 
 		// clear input values after form submitted
 		$item.val('');
+		$quantity.val('');
 		$price.val('');
 
 		// keeping track of running totals
-		subtotal = subtotal + price;
+		subtotal = subtotal + price * quantity;
 		$subtotal.text(' - ' + subtotal.toFixed(2));
 		tax = subtotal * taxRate/100;
 		total = subtotal + tax;
