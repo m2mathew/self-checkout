@@ -11,7 +11,8 @@ var $ = require('jquery');
 
 var $item = $('#item');
 var $price = $('#price');
-var $buttonBox = $('#total-button-box');
+var $totalButton = $('#total-button');
+var $itemList = $('#item-list');
 
 $(document).ready(function() {
 	var Tax = 5.5;
@@ -22,11 +23,20 @@ $(document).ready(function() {
 	$('form').on('submit', function(e) {
 		e.preventDefault();
 
-		var price = parseFloat($price.val());
+		var price = parseFloat($price.val()).toFixed(2);
+		var item = $item.val();
+
+		$('#item-headers').append('<tr><th class="row-item">Item</th><th class="row-price">Price</th></tr>');
+
+		$itemList.append('<tr><td class="row">'+ item +'</td><td>'+ price +'</td></tr>');
 
 	})
 
 
+	$totalButton.on('click', function() {
+
+
+	})
 
 
 });
