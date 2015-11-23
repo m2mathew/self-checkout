@@ -1,5 +1,11 @@
-# Exercises for Programmers
-### by Brian Hogan
+# Self-checkout
+
+Assignment from The Iron Yard-Austin
+
+Week 9 - day 34
+
+
+### Exercises for Programmers by Brian Hogan
 
 Exercise 10
 
